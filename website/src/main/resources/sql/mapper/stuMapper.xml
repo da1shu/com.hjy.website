@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.lanqiao.dao.IStuDao">
+
+    <select id="getAllStu" resultType="Stu">
+        select * from stu
+    </select>
+
+    <delete id="deleteStuById" parameterType="int">
+        delete from stu
+        where id=#{id}
+    </delete>
+
+    <!--<insert id="instertBook"  parameterType="Book" >-->
+        <!--insert into book(name,author,publish,publishdate,page,price,content)-->
+        <!--values (#{name},#{author},#{publish},#{publishdate},#{page},#{price},#{content})-->
+    <!--</insert>-->
+
+    <select id="getStuById" parameterType="int" resultType="Stu">
+        select * from stu where id=#{id}
+    </select>
+
+    <!--<update id="updateBookById" parameterType="int">-->
+        <!--update book set name=#{name},author=#{author},publish=#{publish},publishdate=#{publishdate},page=#{page},-->
+        <!--price=#{price},content=#{content}-->
+    <!--</update>-->
+
+</mapper>
